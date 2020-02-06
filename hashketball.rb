@@ -210,4 +210,11 @@ def most_points_scored
   end
   return highest_scoring_player
 end
-    
+
+def winning_team
+  highest_score = 0
+  highest_scoring_team_name = ""
+  team_information("players")
+end
+
+pp(team_information("players"))

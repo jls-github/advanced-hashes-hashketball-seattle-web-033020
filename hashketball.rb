@@ -162,6 +162,6 @@ end
 
 def player_numbers(team)
   arr = []
-  team_information("players")[team].each {|player, player_info| arr.push(player_info[:number])}
+  team_information("players")[team].each {|player| arr.push(player[:number])}
   arr
 end

@@ -227,4 +227,12 @@ def winning_team
   return highest_scoring_team_name
 end
 
-puts winning_team
+def player_with_longest_name
+  longest_name = ""
+  players_info.each do |player_info|
+    if player_info[:player_name].length > longest_name.length
+      longest_name = player_info[:player_name]
+    end
+  end
+  reutrn longest_name
+end

@@ -153,7 +153,7 @@ def shoe_size(player)
 end
 
 def team_colors(team)
-  team_information(colors)[team]
+  team_information("colors")[team]
 end
 
 

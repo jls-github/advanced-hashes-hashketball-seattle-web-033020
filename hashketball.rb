@@ -156,10 +156,6 @@ def team_colors(team)
   team_information("colors")[team]
 end
 
-def team_names(team)
-  arr = []
-  team_information("players").each do |player, player_info|
-    arr.push(player_info[:player_name])
-  end
-  arr
+def team_names
+  team_information("team_names")
 end

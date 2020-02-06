@@ -159,3 +159,6 @@ end
 def team_names
   team_information("team_name")
 end
+
+
+pp(team_names)

@@ -217,8 +217,14 @@ def winning_team
   team_information("players").each do |team_name, players|
     team_score = 0
     players.each do |player|
-      player[:points]
-      team_score = 0
+      team_score += player[:points]
+    end
+    if team_score > highest_score
+      highest_score = team_score
+      highest_scoring_team_name = team_name
+    end
+  end
+  return highest_scoring_team_name
 end
 
-pp(team_information("players"))
+puts winning_team

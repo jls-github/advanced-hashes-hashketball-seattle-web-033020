@@ -154,7 +154,7 @@ def team_information(info)
   new_hash
 end
 
-pp(teams)
+pp(team_information(colors))
 
 
 

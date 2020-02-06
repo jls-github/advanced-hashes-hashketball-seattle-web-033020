@@ -199,4 +199,14 @@ def big_shoe_rebounds
   return rebound_record
 end
 
-pp(players_info)
+def most_points_scored
+  highest_score = 0
+  highest_scoring_player = ""
+  players_info.each do |player_info|
+    if player_info[:points] > highest_score
+      highest_score = player_info[:points]
+      highest_scoring_player = player_info[:player_name]
+    end
+  end
+end
+    

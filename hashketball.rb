@@ -133,6 +133,10 @@ def names_with_shoe_size
   names_with_stats(:shoe)
 end
 
+
+
+
+
 def num_points_scored(player)
   names_with_points[player]
 end
@@ -141,7 +145,12 @@ def shoe_size(player)
   names_with_shoe_size[player]
 end
 
-
+def team_info(team, )
+  new_hash = {}
+  game_hash.each do |team_key, team_info|
+  end
+  return new_hash
+end
 
 
 

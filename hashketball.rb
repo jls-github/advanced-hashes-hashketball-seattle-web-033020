@@ -172,5 +172,8 @@ def player_stats(name)
   team_information("players").each do |team_key, team|
     team.each do |player|
       if player[:player_name] == name
-        
+        player.delete(:player_name)
+        return player
+      end
+    end
 end

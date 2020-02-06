@@ -168,6 +168,14 @@ def player_numbers(team)
   arr
 end
 
+def players_info
+  player_array = []
+  team_information("players").each do |team_key, team|
+    team.each {|player| player_array.push[player]}
+  end
+end
+      
+
 def player_stats(name)
   team_information("players").each do |team_key, team|
     team.each do |player|

@@ -215,6 +215,7 @@ def winning_team
   highest_score = 0
   highest_scoring_team_name = ""
   team_information("players").each do |team_name, players|
+    team_score = 0
     players.each do |player|
       player[:points]
       team_score = 0

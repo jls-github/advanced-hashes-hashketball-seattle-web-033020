@@ -146,10 +146,10 @@ def shoe_size(player)
   names_with_shoe_size[player]
 end
 
-def teams
+def team_information(info)
   new_hash = {}
-  game_hash.each do |team, team_info|
-    new_hash[team_info[:team_name]] = [team_info[:colors], team_info[:players]]
+  game_hash.each do |team_key, team_value|
+    new_hash[team_info[:team_name]] = [team_info[info]
   end
   new_hash
 end

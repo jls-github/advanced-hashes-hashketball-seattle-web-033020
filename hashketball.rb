@@ -169,7 +169,7 @@ def player_numbers(team)
 end
 
 def player_stats(name)
-  team_information("players")
+  team_information("players").each do |team_key, team|
+    team.each do |player|
+      if player[:player_name] == name
 end
-
-pp(names_with_stats)

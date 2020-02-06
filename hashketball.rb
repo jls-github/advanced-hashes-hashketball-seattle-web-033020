@@ -160,5 +160,8 @@ def team_names
   team_information("team_name").keys
 end
 
-
-pp(team_names)
+def player_numbers(team)
+  arr = []
+  team_information("players")[team].each {|player, player_info| arr.push(player_info[:number])}
+  arr
+end

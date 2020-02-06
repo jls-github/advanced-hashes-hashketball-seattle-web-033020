@@ -167,3 +167,9 @@ def player_numbers(team)
   end
   arr
 end
+
+def player_stats(name)
+  team_information("players")
+end
+
+pp(team_information("players"))

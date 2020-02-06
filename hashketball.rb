@@ -208,5 +208,6 @@ def most_points_scored
       highest_scoring_player = player_info[:player_name]
     end
   end
+  return highest_scoring_player
 end
     

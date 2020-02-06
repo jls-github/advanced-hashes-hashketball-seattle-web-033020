@@ -172,4 +172,4 @@ def player_stats(name)
   team_information("players")
 end
 
-pp(name_with_stats("players"))
+pp(names_with_stats)

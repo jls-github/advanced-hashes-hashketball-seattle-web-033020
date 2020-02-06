@@ -147,6 +147,7 @@ def players_info
   team_information("players").each do |team_key, team|
     team.each {|player| player_array.push(player)}
   end
+  player_array
 end
       
 

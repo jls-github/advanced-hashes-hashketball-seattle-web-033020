@@ -119,7 +119,7 @@ def names_with_stats(stat) #helper method displaying all players names with corr
   new_hash = {}
   game_hash.each do |team_key, team_value|
     team_value[:players].each do |player|
-      new_hash[player[:player_name]] = player[stat]
+      new_hash[player[:player_name]] = player[stat.to_sym]
     end
   end
   return new_hash

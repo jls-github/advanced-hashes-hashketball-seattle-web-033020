@@ -181,12 +181,13 @@ end
 
 def big_shoe_rebounds
   largest_shoe = 0
+  rebound_record
   team_information("players").each do |team_key, team|
     team.each do |player|
-      if player[:player_name] == name
-        player.delete(:player_name)
-        return player
+      if player[:shoe] > largest_shoe
+        rebound_record = player[:rebounds]
       end
     end
   end
+  return rebound_record
 end

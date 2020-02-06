@@ -126,11 +126,11 @@ def names_with_stats(stat) #helper method displaying all players names with corr
 end
 
 def names_with_points
-  names_with_stats(points)
+  names_with_stats("points")
 end
 
 def names_with_shoe_size
-  names_with_stats(shoe)
+  names_with_stats("shoe")
 end
 
 def num_points_scored(player)

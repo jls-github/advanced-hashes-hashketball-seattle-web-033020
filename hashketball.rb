@@ -237,6 +237,18 @@ def player_with_longest_name
   return longest_name
 end
 
+def most_steals
+  highest_score = 0
+  highest_scoring_player = ""
+  players_info.each do |player_info|
+    if player_info[:steals] > highest_score
+      highest_score = player_info[:steals]
+      highest_scoring_player = player_info[:player_name]
+    end
+  end
+  return highest_scoring_player
+end
+
 def long_name_steals_a_ton?
-  longest_name = player_with_longest_name
+  player_with_longest_name == most_steals ? true : false
 end

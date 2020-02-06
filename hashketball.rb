@@ -199,3 +199,5 @@ def big_shoe_rebounds
   end
   return rebound_record
 end
+
+pp(players_info)

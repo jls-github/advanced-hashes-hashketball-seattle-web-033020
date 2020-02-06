@@ -149,7 +149,7 @@ end
 def team_information(info)
   new_hash = {}
   game_hash.each do |team_key, team_value|
-    new_hash[team_info[:team_name]] = team_info[info]
+    new_hash[team_value[:team_name]] = team_value[info]
   end
   new_hash
 end

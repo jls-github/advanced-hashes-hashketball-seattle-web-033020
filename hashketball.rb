@@ -157,7 +157,7 @@ def team_colors(team)
 end
 
 def team_names
-  team_information("team_name")["team_name"]
+  team_information("team_name").keys
 end
 
 

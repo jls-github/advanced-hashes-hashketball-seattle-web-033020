@@ -145,7 +145,7 @@ end
 def players_info
   player_array = []
   team_information("players").each do |team_key, team|
-    team.each {|player| player_array.push[player]}
+    team.each {|player| player_array.push(player)}
   end
 end
       

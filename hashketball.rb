@@ -115,6 +115,7 @@ def game_hash
   }
 end
 
+
 def names_with_stats(stat) #helper method displaying all players names with corresponding points
   new_hash = {}
   game_hash.each do |team_key, team_value|
@@ -145,12 +146,15 @@ def shoe_size(player)
   names_with_shoe_size[player]
 end
 
-def team_info(team, )
+def teams
   new_hash = {}
-  game_hash.each do |team_key, team_info|
+  game_hash.each do |team, team_info|
+    new_hash[team_info[:team_name]] => [team_info[:colors], team_info[:players]]
   end
-  return new_hash
+  new_hash
 end
+
+pp(teams)
 
 
 

@@ -174,8 +174,9 @@ def player_stats(name)
       if player[:player_name] == name
         player.delete(:player_name)
         return player
-        
       end
     end
   end
 end
+
+pp player_stats("Bismack Biyombo")

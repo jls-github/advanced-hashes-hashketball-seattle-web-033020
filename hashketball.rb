@@ -142,6 +142,14 @@ def team_information(info)
   new_hash
 end
 
+def players_info
+  player_array = []
+  team_information("players").each do |team_key, team|
+    team.each {|player| player_array.push[player]}
+  end
+end
+      
+
 
 
 def num_points_scored(player)
@@ -168,21 +176,12 @@ def player_numbers(team)
   arr
 end
 
-def players_info
-  player_array = []
-  team_information("players").each do |team_key, team|
-    team.each {|player| player_array.push[player]}
-  end
-end
-      
 
 def player_stats(name)
-  team_information("players").each do |team_key, team|
-    team.each do |player|
-      if player[:player_name] == name
-        player.delete(:player_name)
-        return player
-      end
+  players_info.each do |player_info|
+    if player_info[:player_name] == name
+      player_info.delete(:player_name)
+      return player_info
     end
   end
 end

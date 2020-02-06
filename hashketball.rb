@@ -115,21 +115,31 @@ def game_hash
   }
 end
 
-def names_with_points #helper method displaying all players names with corresponding points
+def names_with_stats(stat) #helper method displaying all players names with corresponding points
   new_hash = {}
   game_hash.each do |team_key, team_value|
     team_value[:players].each do |player|
-      new_hash[player[:player_name]] = player[:points]
+      new_hash[player[:player_name]] = player[stat]
     end
   end
   return new_hash
+end
+
+def names_with_points
+  names_with_stats(points)
+end
+
+def names_with_shoe_size
+  names_with_stats(shoe)
 end
 
 def num_points_scored(player)
   names_with_points[player]
 end
 
-
+def shoe_size(player)
+  names_with_shoe_size[player]
+end
 
 
 
